@@ -24,10 +24,9 @@ for web in config.web:
         speed = endTime - startTime
         detchar = chardet.detect(content)
         content = content.decode(detchar['encoding'])
-        #print(content.find(web[2]))
         if content.find(web[2]) == -1:
-            raise Exception(f"Ключевая фраза - {web[2]} - не найдена на странице.") 
+            raise Exception(f'Keywords "{web[2]}" were not found on the page.') 
        # print(web[0], str(speed))
     except Exception as e:
-        send_to_telegram(f"Веб сервис - {web[0]} - не работает.\n {web[1]}\n {e}")
+        send_to_telegram(f'The Website "{web[0]}" is Down.\n {web[1]}\n {e}')
 
