@@ -12,5 +12,5 @@ Now copy config.py.example to config.py and edit it as you needed.
 
 ### Test run
 ```
-python3 py-anal.py
+python3 pt-anal.py
 ```
