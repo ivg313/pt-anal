@@ -33,6 +33,7 @@ for web in config.web:
         except Exception as e:
             config.attempts -=1
             ohshit = f'The Website "{web[0]}" is Down.\n {web[1]}\n {e}'
+            time.sleep(5)
             #print('try again')
     else:
         if ohshit:
